@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo Fallout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" media="screen" href="pipboy.css">
+</head>
+<body>
+	<header>
+		
+	</header>
+	
+
+	
+	<section>
+		<div id="fondo"></div>
+		<div id="scan"></div>
+		<div id="lineas"></div>
+		
+		<div id="lineasmenu"></div>
+		<article id="menu">
+			<nav>
+				<ul id="menuseleccion">
+					<li>
+						<input type="radio" id="menuspecial" name="menuselect" checked="checked"/>
+						
+						<article id="special" class="contenido">
+							<div id="stats">
+								<ul id="menustat">
+									<li>
+										<input type="radio" id="menufuerza" name="menustats" checked="checked"/>
+											<div class="fotostat" id="fotofuerza"></div>
+											<div class="textostat" id="textofuerza">
+												<p>La fuerza es la medida de tu físico bruto. Afecta a tu capacidad de cargar 
+												y determina la efectividad de los ataques cuerpo a cuerpo.</p>
+											</div>
+										<label for="menufuerza">Strength (Fuerza)</label>
+									</li>
+									<li>
+										<input type="radio" id="menupercepcion" name="menustats"/>
+											<div class="fotostat" id="fotopercepcion"></div>
+											<div class="textostat" id="textopercepcion">
+												<p>Una alta Percepción otorga un bonus a las habilidades Explosivos, Ganzúa y Armas de energía, 
+												y determina el momento en el que aparece la señal roja de la brújula (lo que indica amenazas).</p>
+											</div>
+										<label for="menupercepcion">Perception (Percepción)</label>
+									</li>
+									<li>
+										<input type="radio" id="menuresistencia" name="menustats"/>
+											<div class="fotostat" id="fotoresistencia"></div>
+											<div class="textostat" id="textoresistencia">
+												<p>Una resistencia elevada otorga bonus para Salud, resistencias al medio ambiente, 
+												y las habilidades Armas grandes y desarmado.</p>
+											</div>
+										<label for="menuresistencia">Endurance (Resistencia)</label>
+									</li>
+									<li>
+										<input type="radio" id="menucarisma" name="menustats"/>
+											<div class="fotostat" id="fotocarisma"></div>
+											<div class="textostat" id="textocarisma">
+												<p>Tener mucho carisma te pone en buena disposición con la gente, 
+												y proporciona bonus para las habilidades Trueque y Conversación.</p>
+											</div>
+										<label for="menucarisma">Charisma (Carisma)</label>
+									</li>
+									<li>
+										<input type="radio" id="menuinteligencia" name="menustats"/>
+											<div class="fotostat" id="fotointeligencia"></div>
+											<div class="textostat" id="textointeligencia">
+												<p>Cuanto más alta sea tu inteligencia, más puntos de habilidad podrás 
+												distribuir cuando asciendas de nivel.</p>
+											</div>
+										<label for="menuinteligencia">Intelligence (Inteligencia)</label>
+									</li>
+									<li>
+										<input type="radio" id="menuagilidad" name="menustats"/>
+											<div class="fotostat" id="fotoagilidad"></div>
+											<div class="textostat" id="textoagilidad">
+												<p>La agilidad afecta a tus habilidades Armas pequeñas y Sigilo, 
+												y al número de puntos de acción disponibles para V.A.T.S.</p>
+											</div>
+										<label for="menuagilidad">Agility (Agilidad)</label>
+									</li>
+									<li>
+										<input type="radio" id="menusuerte" name="menustats"/>
+											<div class="fotostat" id="fotosuerte"></div>
+											<div class="textostat" id="textosuerte">
+												<p>Al aumentar tu suerte, aumentarán ligeramente todas tus habilidades. 
+												Una suerte alta mejora también tu Oportunidad crítica con todas las armas.</p>
+											</div>
+										<label for="menusuerte">Luck (Suerte)</label>
+									</li>
+							
+							</div>
+						</article>
+						
+						<label for="menuspecial"><span>SPECIAL</span></label>
+					</li>
+					<li>
+						<input type="radio" id="menufaccion" name="menuselect" />
+						
+						<article id="facciones" class="contenido">
+						</article>
+						
+						<label for="menufaccion"><span>FACCIONES</span></label>
+					</li>
+					<li>
+						<input type="radio" id="menuradio" name="menuselect" />
+						
+						<article id="radio" class="contenido">
+						<audio controls>
+							<source src="audio/fallout.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+						</article>
+						
+						<label for="menuradio"><span>RADIO</span></label>
+					</li>
+				</ul>
+				
+				
+			</nav>
+		</article>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</section>
+	
+	<aside>
+		
+	</aside>
+	
+	<footer>
+		Álvaro Suárez Chausson. Copyright 2017
+	</footer>
+</body>
+</html>

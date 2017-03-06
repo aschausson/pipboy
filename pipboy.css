@@ -1,0 +1,337 @@
+body{
+color: #3ADF00;
+background-color: black;
+animation-name: brillo;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
+	margin: 0px;
+	font-family:Arial;
+}
+
+
+
+#fondo{
+	background-image: url(img/pipboyfondo2.png);
+	background-size: 2000px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute; 
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+section article{
+	width: 935px;
+	height: 725px;
+	position: absolute;
+	top: 142px;
+	left: 357px;
+	z-index: -1;
+	padding: 30px;
+	
+	font-size: 30px;
+	
+}
+
+#lineasmenu{
+	width: 800px;
+	height: 20px;
+	border-top: solid 2px #3ADF00;
+	border-left: solid 2px #3ADF00;
+	border-right: solid 2px #3ADF00;
+	position: absolute;
+	top: 227px;
+	left: 415px;
+	z-index: -1;
+}
+
+
+#menuseleccion > li{
+	float: left;
+	list-style-type: none;
+
+	width: 200px;
+	text-align: center;
+	/*border: 2px solid #3ADF00;*/
+	margin-top: -15px;
+	height: 50px;
+	z-index: 20;
+}
+nav{
+	padding-left: 75px;
+}
+
+span{
+	background-color: black;
+}
+
+#menuseleccion label, #menuseleccion input {
+    display:block;
+    position:relative;
+	 
+}
+label{
+	/*background-color: blue;*/
+		border-top: solid 2px black;
+	margin-left: auto;
+	margin-right: auto;
+	z-index:1;
+height:20px;
+
+line-height: 10px;
+}
+
+#menuseleccion input[type="radio"] {
+    opacity:0.01;
+    z-index:100;
+}
+/*
+#menuseleccion input[type="radio"]:checked + label,
+.Checked + label {
+    background:yellow;
+}
+
+
+#menuspecial:checked + label{
+	 background:yellow;
+}
+*/
+
+
+
+#menuspecial:checked + #special{
+z-index: 5;
+}
+
+#menufaccion:checked + #facciones{
+z-index: 5;
+}
+
+#menuradio:checked + #radio{
+z-index: 5;
+}
+
+#menuseleccion > li > input:checked ~ label{
+	border-top: solid 2px #3ADF00;
+	border-left: solid 2px #3ADF00;
+	border-right: solid 2px #3ADF00;
+	border-bottom: solid 4px black;
+}
+
+.contenido{
+	width: 795px;
+	height: 580px;
+	position: absolute;
+	top: 110px;
+	left: 60px;
+	z-index: 4;
+	padding: 0px;
+}
+
+#special{
+	background-color: black;
+	z-index: 4;
+}
+
+#facciones{
+	background-color: red;
+	z-index: 4;
+}
+
+
+#radio{
+	background-color: white;
+	z-index: 4;
+}
+
+
+#lineas{
+	width: 935px;
+	height: 725px;
+	border: solid 2px #3ADF00;
+	position: absolute;
+	top: 142px;
+	left: 357px;
+	z-index: 8;
+	
+	background-image: url(img/line.png);
+	background-size: 935px 5px;
+	background-position: top left;
+	background-repeat: repeat;
+opacity:.3;
+	pointer-events: none;
+}
+
+
+#scan{
+	width: 935px;
+	height: 725px;
+	border: solid 2px #3ADF00;
+	position: absolute;
+	top: 142px;
+	left: 357px;
+	z-index: 9;
+	
+	background-image: url(img/scanner.png);
+	background-size: 935px 400px;
+	background-position: 0px -700px;
+	background-repeat: no-repeat;
+	animation-name: scan;
+    animation-duration: 6s;
+	animation-iteration-count: infinite;
+	opacity:.15;
+	pointer-events: none;
+	
+}
+
+@keyframes brillo {
+    0%{color: #3ADF00;}
+	2%{color: #80FF00;}
+	4%{color: #3ADF00;}
+	6%{color: #80FF00;}
+	8%{color: #3ADF00;}
+	20%{color: #80FF00;}
+	40%{color: #3ADF00;}
+
+}
+
+@keyframes scan {
+    0%   {background-position: 0px -900px;}
+    100% {background-position: 0px 900px;}
+}
+
+
+#menustat{
+	position: absolute;
+	width: 300px;
+	height: 550px;
+	padding:0px;
+
+}
+
+.fotostat{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 410px;
+	top: 10px;
+
+}
+
+.textostat{
+	position: absolute;
+	width: 450px;
+	height: 200px;
+	left: 340px;
+	top: 330px;
+}
+
+#menustat li{
+	font-size: 25px;
+	width: 300px;
+	list-style-type: none;
+	width: 200px;
+	text-align: left;
+}
+#menustat li label{
+	display:block;
+    position:relative;
+	font-size: 25px;
+	width: 300px;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 10px;
+	
+}
+
+#menustat li input:checked ~ label{
+	color: black;
+	background-color: #3ADF00;
+}
+
+#fotofuerza{
+	background-image: url(img/fuerza.svg);
+	background-size: 300px 300px;
+	background-color: black;
+}
+#fotopercepcion{
+	background-image: url(img/percepcion.svg);
+	background-size: 300px 300px;
+	background-color: black;
+}
+#fotoresistencia{
+	background-image: url(img/resistencia.svg);
+	background-size: 300px 300px;
+	background-color: black;
+}
+#fotocarisma{
+	background-image: url(img/carisma.svg);
+	background-size: 300px 300px;
+	background-color: black;
+}
+#fotointeligencia{
+	background-image: url(img/inteligencia.svg);
+	background-size: 300px 300px;
+	background-color: black;
+}
+#fotoagilidad{
+	background-image: url(img/agilidad.svg);
+	background-size: 300px 300px;
+	background-color: black;
+}
+#fotosuerte{
+	background-image: url(img/suerte.svg);
+	background-size: 300px 300px;
+	background-color: black;
+}
+
+#menufuerza:checked + #fotofuerza{
+z-index: 200;
+}
+#menupercepcion:checked + #fotopercepcion{
+z-index: 200;
+}
+#menuresistencia:checked + #fotoresistencia{
+z-index: 200;
+}
+#menucarisma:checked + #fotocarisma{
+z-index: 200;
+}
+#menuinteligencia:checked + #fotointeligencia{
+z-index: 200;
+}
+#menuagilidad:checked + #fotoagilidad{
+z-index: 200;
+}
+#menusuerte:checked + #fotosuerte{
+z-index: 200;
+}
+
+
+.textostat{
+	background-color: black;
+}
+
+#menufuerza:checked ~ #textofuerza{
+z-index: 200;
+}
+#menupercepcion:checked ~ #textopercepcion{
+z-index: 200;
+}
+#menuresistencia:checked ~ #textoresistencia{
+z-index: 200;
+}
+#menucarisma:checked ~ #textocarisma{
+z-index: 200;
+}
+#menuinteligencia:checked ~ #textointeligencia{
+z-index: 200;
+}
+#menuagilidad:checked ~ #textoagilidad{
+z-index: 200;
+}
+#menusuerte:checked ~ #textosuerte{
+z-index: 200;
+}
