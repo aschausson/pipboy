@@ -4,6 +4,7 @@
 	<title>Todo Fallout</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" media="screen" href="pipboy.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
 	<header>
@@ -22,13 +23,13 @@
 			<nav>
 				<ul id="menuseleccion">
 					<li>
-						<input type="radio" id="menuspecial" name="menuselect" checked="checked"/>
+						<input type="radio" id="menuspecial" name="menuselect" checked="checked" class="menu"/>
 						
 						<article id="special" class="contenido">
 							<div id="stats">
 								<ul id="menustat">
 									<li>
-										<input type="radio" id="menufuerza" name="menustats" checked="checked"/>
+										<input type="radio" id="menufuerza" name="menustats" checked="checked" class="menu"/>
 											<div class="fotostat" id="fotofuerza"></div>
 											<div class="textostat" id="textofuerza">
 												<p>La fuerza es la medida de tu físico bruto. Afecta a tu capacidad de cargar 
@@ -37,7 +38,7 @@
 										<label for="menufuerza">Strength (Fuerza)</label>
 									</li>
 									<li>
-										<input type="radio" id="menupercepcion" name="menustats"/>
+										<input type="radio" id="menupercepcion" name="menustats" class="menu"/>
 											<div class="fotostat" id="fotopercepcion"></div>
 											<div class="textostat" id="textopercepcion">
 												<p>Una alta Percepción otorga un bonus a las habilidades Explosivos, Ganzúa y Armas de energía, 
@@ -46,7 +47,7 @@
 										<label for="menupercepcion">Perception (Percepción)</label>
 									</li>
 									<li>
-										<input type="radio" id="menuresistencia" name="menustats"/>
+										<input type="radio" id="menuresistencia" name="menustats" class="menu"/>
 											<div class="fotostat" id="fotoresistencia"></div>
 											<div class="textostat" id="textoresistencia">
 												<p>Una resistencia elevada otorga bonus para Salud, resistencias al medio ambiente, 
@@ -55,7 +56,7 @@
 										<label for="menuresistencia">Endurance (Resistencia)</label>
 									</li>
 									<li>
-										<input type="radio" id="menucarisma" name="menustats"/>
+										<input type="radio" id="menucarisma" name="menustats" class="menu"/>
 											<div class="fotostat" id="fotocarisma"></div>
 											<div class="textostat" id="textocarisma">
 												<p>Tener mucho carisma te pone en buena disposición con la gente, 
@@ -64,7 +65,7 @@
 										<label for="menucarisma">Charisma (Carisma)</label>
 									</li>
 									<li>
-										<input type="radio" id="menuinteligencia" name="menustats"/>
+										<input type="radio" id="menuinteligencia" name="menustats" class="menu"/>
 											<div class="fotostat" id="fotointeligencia"></div>
 											<div class="textostat" id="textointeligencia">
 												<p>Cuanto más alta sea tu inteligencia, más puntos de habilidad podrás 
@@ -73,7 +74,7 @@
 										<label for="menuinteligencia">Intelligence (Inteligencia)</label>
 									</li>
 									<li>
-										<input type="radio" id="menuagilidad" name="menustats"/>
+										<input type="radio" id="menuagilidad" name="menustats"  class="menu"/>
 											<div class="fotostat" id="fotoagilidad"></div>
 											<div class="textostat" id="textoagilidad">
 												<p>La agilidad afecta a tus habilidades Armas pequeñas y Sigilo, 
@@ -82,7 +83,7 @@
 										<label for="menuagilidad">Agility (Agilidad)</label>
 									</li>
 									<li>
-										<input type="radio" id="menusuerte" name="menustats"/>
+										<input type="radio" id="menusuerte" name="menustats"  class="menu"/>
 											<div class="fotostat" id="fotosuerte"></div>
 											<div class="textostat" id="textosuerte">
 												<p>Al aumentar tu suerte, aumentarán ligeramente todas tus habilidades. 
@@ -94,51 +95,120 @@
 							</div>
 						</article>
 						
-						<label for="menuspecial"><span>SPECIAL</span></label>
+						<label for="menuspecial"><span>STAT</span></label>
 					</li>
+					
 					<li>
-						<input type="radio" id="menufaccion" name="menuselect" />
+						<input type="radio" id="menudata" name="menuselect"  class="menu"/>
+						
+						<article id="data" class="contenido">
+
+						<fieldset class="datos">
+							<legend>Datos de usuario PipBoy</legend>
+							<table>
+								<tr>
+									<td>
+										Nombre: <input type="text" name="name_control" autofocus required />
+									</td>
+									<td>
+										<input type="radio" name="sexo" value="hombre" class="sex"> Hombre<br/>
+										<input type="radio" name="sexo" value="mujer" class="sex">Mujer<br/>
+									</td>
+								</tr>
+				
+								<tr>
+									<td>
+										Faccion: <select class="fact" id="faction" name="faction">
+											<option value="railroad" selected="selec">Railroad</option>
+											<option value="minutemen">Minutemen</option>
+											<option value="institute">Institute</option>
+										</select>
+					</td>
+					<td>
+						<label for="nacimiento">Fecha de nacimiento (dd/mm/aaaa):</label>
+						<br/>
+						<input id="nacimiento" type="date" name="date_control" />
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2">
+						<label for="domicilio">Domicilio en (Calle, plaza y número):</label>
+						<br/>
+						<input id="domicilio" type="text" name="domicilio" value="" size="50" />
+					</td>
+					<td>
+						<label for="postal">Código Postal:</label>
+						<br/>
+						<input id="postal" type="text" name="postal" value="" size="5" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="localidad">Localidad:</label>
+						<br/>
+						<select class="local" id="local2" name="localidad">
+							<option value="vegas" selected="selec">New Vegas</option>
+							<option value="commonwelth">Commonwelth</option>
+							<option value="capital">Capital Wasteland</option>
+						</select>
+					</td>
+					<td>
+						<label for="telefono">Teléfono:</label>
+						<input id="telefono" type="tel" name="tel_control" />
+					</td>
+					<td>
+					Correo Electrónico: <input type="email" name="email_control" required />
+					</td>
+				</tr>
+<tr>
+<input type="submit" value="Mandar" />	
+	</tr>			
+			</table>
+		</fieldset>
+						</article>
+						<label for="menudata"><span>DATA</span></label>
+					</li>
+					
+					<li>
+						<input type="radio" id="menufaccion" name="menuselect"  class="menu"/>
 						
 						<article id="facciones" class="contenido">
+							<img id="map" src="img/mapa.png" usemap="#mapamap">
+									<map name="mapamap">
+										<area shape="rect" coords="60,50,80,70" target="_blank" href="http://fallout.wikia.com/wiki/Vault_111">
+										<area shape="rect" coords="155,195,210,210" target="_blank" href="http://fallout.wikia.com/wiki/Lexington">
+										<area shape="rect" coords="730,680,785,720" target="_blank" href="http://fallout.wikia.com/wiki/Spectacle_Island">
+									</map>
 						</article>
 						
-						<label for="menufaccion"><span>FACCIONES</span></label>
+						<label for="menufaccion"><span>MAP</span></label>
 					</li>
 					<li>
-						<input type="radio" id="menuradio" name="menuselect" />
+						<input type="radio" id="menuradio" name="menuselect" class="menu" />
 						
 						<article id="radio" class="contenido">
-						<p>Tema principal:</p>
-						<audio controls>
-							<source src="audio/fallout.mp3" type="audio/mpeg">
-							Your browser does not support the audio element.
-						</audio>
+							<p>Tema principal:</p>
+							<audio controls>
+								<source src="audio/fallout.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
 						</article>
-						
 						<label for="menuradio"><span>RADIO</span></label>
 					</li>
 				</ul>
 				
 				
 			</nav>
+			<footer>
+				Álvaro Suárez Chausson. Copyright 2017
+			</footer>
 		</article>
 		
-		
-		
-		
-		
-		
-		
-		
-		
 	</section>
+
 	
-	<aside>
-		
-	</aside>
-	
-	<footer>
-		Álvaro Suárez Chausson. Copyright 2017
-	</footer>
+
 </body>
 </html>

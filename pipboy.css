@@ -6,20 +6,22 @@ animation-name: brillo;
 	animation-iteration-count: infinite;
 	margin: 0px;
 	font-family:Arial;
+	transform-origin: 0 0;
+position: absolute;
+height: 100%;
+width: 100%;
+padding: 0;
 }
 
 
 
 #fondo{
-	background-image: url(img/pipboyfondo2.png);
-	background-size: 2000px;
-	background-repeat: no-repeat;
-	background-position: top left;
+
 	position: absolute; 
 	z-index: 10;
-	width: 100%;
-	height: 100%;
+
 	pointer-events: none;
+	
 }
 
 section article{
@@ -52,7 +54,7 @@ section article{
 	float: left;
 	list-style-type: none;
 
-	width: 200px;
+	width: 170px;
 	text-align: center;
 	/*border: 2px solid #3ADF00;*/
 	margin-top: -15px;
@@ -60,7 +62,7 @@ section article{
 	z-index: 20;
 }
 nav{
-	padding-left: 75px;
+	padding-left: 50px;
 }
 
 span{
@@ -83,8 +85,8 @@ height:20px;
 line-height: 10px;
 }
 
-#menuseleccion input[type="radio"] {
-    opacity:0.01;
+.menu {
+   opacity:0.01;
     z-index:100;
 }
 /*
@@ -113,11 +115,19 @@ z-index: 5;
 z-index: 5;
 }
 
+#menudata:checked + #data{
+z-index: 5;
+}
+
 #menuseleccion > li > input:checked ~ label{
 	border-top: solid 2px #3ADF00;
 	border-left: solid 2px #3ADF00;
 	border-right: solid 2px #3ADF00;
 	border-bottom: solid 5px black;
+}
+
+#menufaccion:checked + body{
+transform: scaleX(0.4) scaleY(0.4);
 }
 
 .contenido{
@@ -136,10 +146,49 @@ z-index: 5;
 }
 
 #facciones{
-	background-color: red;
+
+	/*background-image: url(img/mapa.png);
+	background-size: 943px 925px;
+	background-repeat: no-repeat;
+	background-position: top left;*/
+	overflow: auto;
 	z-index: 4;
 }
 
+#data{
+	background-color: black;
+	z-index: 4;
+	font-size: 20px;
+}
+
+
+#facciones div{
+	
+	position: absolute;
+	background-color: black;
+/*	border: 3px solid #3ADF00;*/
+	width: 500px;
+	height: 250px;
+	top: 150px;
+	left: 150px;
+}
+
+#facciones::-webkit-scrollbar{
+	
+	background-color: black;;
+}
+#facciones::-webkit-scrollbar-track{
+	background-color: black;
+}
+
+#facciones::-webkit-scrollbar-thumb{
+	
+	background-color: #3ADF00;
+}
+
+#facciones::-webkit-scrollbar-corner{
+	background-color: black;
+}
 
 #radio{
 	background-color: black;
@@ -151,7 +200,7 @@ z-index: 5;
 #lineas{
 	width: 935px;
 	height: 725px;
-	border: solid 2px #3ADF00;
+	/*border: solid 2px #3ADF00;*/
 	position: absolute;
 	top: 142px;
 	left: 357px;
@@ -169,7 +218,7 @@ opacity:.3;
 #scan{
 	width: 935px;
 	height: 725px;
-	border: solid 2px #3ADF00;
+	/*border: solid 2px #3ADF00;*/
 	position: absolute;
 	top: 142px;
 	left: 357px;
@@ -336,3 +385,130 @@ z-index: 200;
 #menusuerte:checked ~ #textosuerte{
 z-index: 200;
 }
+
+
+footer{
+    position: absolute; 
+    top: 710px;
+	left: 350px;
+font-size: 15px;
+    height: 20px;
+text-align: center;
+	z-index: 300;
+
+}
+
+input[type=text] {
+    border: 2px solid #3ADF00;
+    background-color: black;
+	color: #3ADF00;
+}
+
+input[type=text]:focus {
+    border: 2px solid #40FF00;
+}
+
+select {
+
+    background-color: black;
+	color: #3ADF00;
+	border: 2px solid #3ADF00;
+}
+
+fieldset{
+	border: 2px solid #3ADF00;
+}
+
+@media (max-width: 500px){
+		body{
+		transform: scaleX(0.45) scaleY(0.45);
+		left: -185px;
+		top: -80px;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 700px){
+		body{
+		transform: scaleX(0.6) scaleY(0.6);
+		left: -250px;
+		top: -100px;
+	}
+}
+
+
+@media (min-width: 701px) and (max-width: 800px){
+		body{
+		transform: scaleX(0.76) scaleY(0.76);
+		left: -250px;
+		top: -100px;
+	}
+}
+
+
+
+@media (min-width: 801px) and (max-width: 1000px){
+	body{
+		transform: scaleX(0.5) scaleY(0.5);
+	}
+	
+	#fondo{
+	background-image: url(img/pipboyfondomin.png);
+	background-size: 2000px;
+	background-repeat: no-repeat;
+	background-position: top left;
+		width: 1920px;
+	height: 1080px;
+	}
+}
+
+
+@media (min-width: 1001px) and (max-width: 1200px){
+	
+	body{
+		transform: scaleX(0.6) scaleY(0.6);
+	}
+	
+		#fondo{
+	background-image: url(img/pipboyfondomin.png);
+	background-size: 2000px;
+	background-repeat: no-repeat;
+	background-position: top left;
+		width: 1920px;
+	height: 1080px;
+	}
+}
+
+
+@media (min-width: 1201px) and (max-width: 1900px){
+	body{
+		transform: scaleX(0.7) scaleY(0.7);
+	}
+	
+		#fondo{
+	background-image: url(img/pipboyfondomin.png);
+	background-size: 2000px;
+	background-repeat: no-repeat;
+	background-position: top left;
+		width: 1920px;
+	height: 1080px;
+	}
+	
+}
+
+@media (min-width: 1901px){
+		body{
+		transform: scaleX(0.95) scaleY(0.95);
+	}
+	
+		#fondo{
+	background-image: url(img/pipboyfondomin.png);
+	background-size: 2000px;
+	background-repeat: no-repeat;
+	background-position: top left;
+		width: 1920px;
+	height: 1080px;
+	}
+}
+
+
+
