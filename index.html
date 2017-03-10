@@ -103,70 +103,62 @@
 						
 						<article id="data" class="contenido">
 
-						<fieldset class="datos">
-							<legend>Datos de usuario PipBoy</legend>
-							<table>
-								<tr>
-									<td>
-										Nombre: <input type="text" name="name_control" autofocus required />
-									</td>
-									<td>
-										<input type="radio" name="sexo" value="hombre" class="sex"> Hombre<br/>
-										<input type="radio" name="sexo" value="mujer" class="sex">Mujer<br/>
-									</td>
-								</tr>
+							<fieldset class="datos">
+								<legend>Datos de usuario PipBoy</legend>
+								<table>
+									<tr>
+										<td>
+											Nombre: <input type="text" name="name_control" autofocus required />
+										</td>
+										<td>
+											<input type="radio" name="sexo" value="hombre" class="sex"><span>Hombre</span>
+											<input type="radio" name="sexo" value="mujer" class="sex"><span>Mujer</span>
+										</td>
+									</tr>
 				
-								<tr>
-									<td>
-										Faccion: <select class="fact" id="faction" name="faction">
-											<option value="railroad" selected="selec">Railroad</option>
-											<option value="minutemen">Minutemen</option>
-											<option value="institute">Institute</option>
-										</select>
-					</td>
-					<td>
-						<label for="nacimiento">Fecha de nacimiento (dd/mm/aaaa):</label>
-						<br/>
-						<input id="nacimiento" type="date" name="date_control" />
-					</td>
-				</tr>
+									<tr>
+										<td>
+											Faccion: <select class="fact" id="faction" name="faction">
+												<option value="railroad" selected="selec">Railroad</option>
+												<option value="minutemen">Minutemen</option>
+												<option value="institute">Institute</option>
+											</select>
+										</td>
+										<td>
+											<label for="nacimiento">Fecha de nacimiento:</label>
+											<input id="nacimiento" type="date" name="date_control" />
+										</td>
+									</tr>
 				
-				<tr>
-					<td colspan="2">
-						<label for="domicilio">Domicilio en (Calle, plaza y número):</label>
-						<br/>
-						<input id="domicilio" type="text" name="domicilio" value="" size="50" />
-					</td>
-					<td>
-						<label for="postal">Código Postal:</label>
-						<br/>
-						<input id="postal" type="text" name="postal" value="" size="5" />
-					</td>
-				</tr>
+									<tr>
+										<td colspan="2">
+											<label for="domicilio">Domicilio en (Calle, plaza y número):</label>
+											<input id="domicilio" type="text" name="domicilio" value="" size="50" />
+										</td>
+									</tr>
 
-				<tr>
-					<td>
-						<label for="localidad">Localidad:</label>
-						<br/>
-						<select class="local" id="local2" name="localidad">
-							<option value="vegas" selected="selec">New Vegas</option>
-							<option value="commonwelth">Commonwelth</option>
-							<option value="capital">Capital Wasteland</option>
-						</select>
-					</td>
-					<td>
-						<label for="telefono">Teléfono:</label>
-						<input id="telefono" type="tel" name="tel_control" />
-					</td>
-					<td>
-					Correo Electrónico: <input type="email" name="email_control" required />
-					</td>
-				</tr>
-<tr>
-<input type="submit" value="Mandar" />	
-	</tr>			
-			</table>
-		</fieldset>
+									<tr>
+										<td>
+											<label for="localidad">Localidad:</label>
+											<select class="local" id="local2" name="localidad">
+												<option value="vegas" selected="selec">New Vegas</option>
+												<option value="commonwelth">Commonwelth</option>
+												<option value="capital">Capital Wasteland</option>
+											</select>
+										</td>
+										<td>
+											<label for="telefono">Teléfono:</label>
+											<input id="telefono" type="tel" name="tel_control" />
+										</td>
+										<td>
+											Correo Electrónico: <input type="email" name="email_control" required />
+										</td>
+									</tr>
+									<tr>
+										<input type="submit" value="Mandar" />	
+									</tr>			
+								</table>
+							</fieldset>
 						</article>
 						<label for="menudata"><span>DATA</span></label>
 					</li>
@@ -176,11 +168,13 @@
 						
 						<article id="facciones" class="contenido">
 							<img id="map" src="img/mapa.png" usemap="#mapamap">
-									<map name="mapamap">
-										<area shape="rect" coords="60,50,80,70" target="_blank" href="http://fallout.wikia.com/wiki/Vault_111">
-										<area shape="rect" coords="155,195,210,210" target="_blank" href="http://fallout.wikia.com/wiki/Lexington">
-										<area shape="rect" coords="730,680,785,720" target="_blank" href="http://fallout.wikia.com/wiki/Spectacle_Island">
-									</map>
+							<map name="mapamap">
+								<area shape="rect" coords="60,50,80,70" target="_blank" href="http://fallout.wikia.com/wiki/Vault_111">
+								<area shape="rect" coords="155,195,210,210" target="_blank" href="http://fallout.wikia.com/wiki/Lexington">
+								<area shape="rect" coords="730,680,785,720" target="_blank" href="http://fallout.wikia.com/wiki/Spectacle_Island">
+								<area shape="rect" coords="315,425,375,440" target="_blank" href="http://fallout.wikia.com/wiki/Cambridge">
+								<area shape="rect" coords="328,523,943,925" target="_blank" href="http://fallout.wikia.com/wiki/Diamond_City">
+							</map>
 						</article>
 						
 						<label for="menufaccion"><span>MAP</span></label>
@@ -207,8 +201,5 @@
 		</article>
 		
 	</section>
-
-	
-
 </body>
 </html>

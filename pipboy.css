@@ -1,9 +1,7 @@
 body{
 color: #3ADF00;
 background-color: black;
-animation-name: brillo;
-    animation-duration: 8s;
-	animation-iteration-count: infinite;
+
 	margin: 0px;
 	font-family:Arial;
 	transform-origin: 0 0;
@@ -101,6 +99,23 @@ line-height: 10px;
 }
 */
 
+td{
+	padding: 20px;
+}
+.sex{
+	left: 40px;
+	top: 21px;
+	 opacity:0.01;
+	   width: 100px;
+	   height: 20px;
+
+    
+}
+
+.sex:checked + span{
+	border: 2px solid #3ADF00;
+}
+
 
 
 #menuspecial:checked + #special{
@@ -145,6 +160,17 @@ transform: scaleX(0.4) scaleY(0.4);
 	z-index: 4;
 }
 
+legend{
+	background-color: black;
+	display: inline;
+}
+
+#map{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
 #facciones{
 
 	/*background-image: url(img/mapa.png);
@@ -153,6 +179,7 @@ transform: scaleX(0.4) scaleY(0.4);
 	background-position: top left;*/
 	overflow: auto;
 	z-index: 4;
+	width: 790px;
 }
 
 #data{
@@ -161,17 +188,6 @@ transform: scaleX(0.4) scaleY(0.4);
 	font-size: 20px;
 }
 
-
-#facciones div{
-	
-	position: absolute;
-	background-color: black;
-/*	border: 3px solid #3ADF00;*/
-	width: 500px;
-	height: 250px;
-	top: 150px;
-	left: 150px;
-}
 
 #facciones::-webkit-scrollbar{
 	
@@ -291,6 +307,7 @@ opacity:.3;
 	font-size: 25px;
 	width: 300px;
 	height: 60px;
+	left: 5px;
 	line-height: 60px;
 	padding-left: 10px;
 	
@@ -398,7 +415,9 @@ text-align: center;
 
 }
 
-input[type=text] {
+
+
+input[type=text], input[type=tel], input[type=date], input[type=email], input[type=submit]{
     border: 2px solid #3ADF00;
     background-color: black;
 	color: #3ADF00;
@@ -416,7 +435,10 @@ select {
 }
 
 fieldset{
-	border: 2px solid #3ADF00;
+	position: absolute;
+	top: 50px;
+	left: 45px;
+	border: 7px solid #3ADF00;
 }
 
 @media (max-width: 500px){
@@ -449,6 +471,9 @@ fieldset{
 @media (min-width: 801px) and (max-width: 1000px){
 	body{
 		transform: scaleX(0.5) scaleY(0.5);
+		animation-name: brillo;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
 	}
 	
 	#fondo{
@@ -466,6 +491,9 @@ fieldset{
 	
 	body{
 		transform: scaleX(0.6) scaleY(0.6);
+		animation-name: brillo;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
 	}
 	
 		#fondo{
@@ -482,6 +510,9 @@ fieldset{
 @media (min-width: 1201px) and (max-width: 1900px){
 	body{
 		transform: scaleX(0.7) scaleY(0.7);
+		animation-name: brillo;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
 	}
 	
 		#fondo{
@@ -498,6 +529,9 @@ fieldset{
 @media (min-width: 1901px){
 		body{
 		transform: scaleX(0.95) scaleY(0.95);
+		animation-name: brillo;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
 	}
 	
 		#fondo{
@@ -507,6 +541,7 @@ fieldset{
 	background-position: top left;
 		width: 1920px;
 	height: 1080px;
+	
 	}
 }
 
