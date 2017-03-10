@@ -505,11 +505,27 @@ fieldset{
 	height: 1080px;
 	}
 }
-
-
-@media (min-width: 1201px) and (max-width: 1900px){
-	body{
+@media (min-width: 1201px) and (max-width: 1500px){
+		body{
 		transform: scaleX(0.7) scaleY(0.7);
+		animation-name: brillo;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
+	}
+	
+		#fondo{
+	background-image: url(img/pipboyfondomin.png);
+	background-size: 2000px;
+	background-repeat: no-repeat;
+	background-position: top left;
+		width: 1920px;
+	height: 1080px;
+	}
+}
+
+@media (min-width: 1501px) and (max-width: 1900px){
+	body{
+		transform: scaleX(0.9) scaleY(0.9);
 		animation-name: brillo;
     animation-duration: 8s;
 	animation-iteration-count: infinite;
@@ -528,7 +544,7 @@ fieldset{
 
 @media (min-width: 1901px){
 		body{
-		transform: scaleX(0.95) scaleY(0.95);
+		transform: scaleX(0.99) scaleY(0.99);
 		animation-name: brillo;
     animation-duration: 8s;
 	animation-iteration-count: infinite;
